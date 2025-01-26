@@ -1,0 +1,14 @@
+###
+# @name=Example1_Start
+POST http://localhost:7289/api/Example1_Start
+Content-Type: application/json
+
+{
+  "name": "MegaCorp"
+}
+
+> {% client.global.set("status_url", response.body.StatusQueryGetUri) %}
+
+###
+# @name=Example1_Status
+GET {{status_url}}

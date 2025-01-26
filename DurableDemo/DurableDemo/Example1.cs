@@ -47,11 +47,18 @@ public class Example1
         logger.LogInformation("Starting trial workflow for customer {CustomerName}", customer.Name);
 
         // Deploy infrastructure
+        context.SetCustomStatus("Provisioning infrastructure...");
         var infrastructure = await context.CallActivityAsync<CustomerInfrastructure>(ProvisionInfrastructure, customer);
 
         // Seed default data
+        context.SetCustomStatus("Seeding default data...");
         await context.CallActivityAsync(SeedData, infrastructure);
+
+        // Deploy application
+        context.SetCustomStatus("Deploying application...");
         await context.CallActivityAsync<string>(DeployApplication, infrastructure);
+
+        context.SetCustomStatus("Workflow completed.");
 
         return infrastructure.Uri;
     }

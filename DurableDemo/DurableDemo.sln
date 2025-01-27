@@ -9,6 +9,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Http", "Http", "{9C7147C5-1
 		..\http\example3.http = ..\http\example3.http
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{F9BA8A6B-137B-4820-BE42-6287EBAA786C}"
+	ProjectSection(SolutionItems) = preProject
+		..\docs\1.FunctionChaining.png = ..\docs\1.FunctionChaining.png
+		..\docs\2.Status.png = ..\docs\2.Status.png
+		..\docs\3.FanInFanOut.png = ..\docs\3.FanInFanOut.png
+		..\docs\4.Interaction.png = ..\docs\4.Interaction.png
+		..\docs\5.Monitor.png = ..\docs\5.Monitor.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

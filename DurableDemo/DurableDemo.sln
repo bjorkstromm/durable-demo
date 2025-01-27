@@ -7,6 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Http", "Http", "{9C7147C5-1
 		..\http\example1.http = ..\http\example1.http
 		..\http\example2.http = ..\http\example2.http
 		..\http\example3.http = ..\http\example3.http
+		..\http\example4.http = ..\http\example4.http
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{F9BA8A6B-137B-4820-BE42-6287EBAA786C}"

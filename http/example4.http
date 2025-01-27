@@ -1,0 +1,8 @@
+###
+# @name=Example4_Start
+POST http://localhost:7289/api/example4
+Content-Type: application/json
+
+{
+  "count": 200
+}

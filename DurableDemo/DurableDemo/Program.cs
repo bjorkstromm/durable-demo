@@ -15,6 +15,7 @@ var host = new HostBuilder()
         services.AddScoped<InfrastructureProvisioner>();
         services.AddScoped<DefaultDataSeeder>();
         services.AddScoped<AppDeployer>();
+        services.AddScoped<Crm>();
     })
     .ConfigureAppConfiguration( builder =>
     {

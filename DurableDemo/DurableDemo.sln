@@ -6,6 +6,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Http", "Http", "{9C7147C5-1
 	ProjectSection(SolutionItems) = preProject
 		..\http\example1.http = ..\http\example1.http
 		..\http\example2.http = ..\http\example2.http
+		..\http\example3.http = ..\http\example3.http
 	EndProjectSection
 EndProject
 Global

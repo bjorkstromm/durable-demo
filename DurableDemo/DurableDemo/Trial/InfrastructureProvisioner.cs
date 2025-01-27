@@ -24,4 +24,13 @@ public class InfrastructureProvisioner(ILogger<InfrastructureProvisioner> logger
 
         return Task.CompletedTask;
     }
+
+    public async Task RemoveInfrastructure(CustomerInformation customer)
+    {
+        logger.LogInformation("Removing infrastructure for customer {CustomerName}", customer.Name);
+
+        #region Implementation
+        await Task.Delay(5000);
+        #endregion
+    }
 }

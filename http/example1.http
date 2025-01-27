@@ -1,6 +1,6 @@
 ###
 # @name=Example1_Start
-POST http://localhost:7289/api/Example1_Start
+POST http://localhost:7289/api/example1
 Content-Type: application/json
 
 {

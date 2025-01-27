@@ -17,4 +17,11 @@ public class InfrastructureProvisioner(ILogger<InfrastructureProvisioner> logger
             Customer = customer
         };
     }
+
+    public Task StartProvision(CustomerInformation customer)
+    {
+        logger.LogInformation("Provisioning infrastructure for customer {CustomerName}", customer.Name);
+
+        return Task.CompletedTask;
+    }
 }

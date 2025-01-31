@@ -1,5 +1,5 @@
 ###
-# @name=Example1_Start
+# @name example1_Start
 POST http://localhost:7289/api/example1
 Content-Type: application/json
 
@@ -7,8 +7,6 @@ Content-Type: application/json
   "name": "MegaCorp"
 }
 
-> {% client.global.set("status_url", response.body.StatusQueryGetUri) %}
-
 ###
-# @name=Example1_Status
-GET {{status_url}}
+# @name example1_Status
+GET {{example1_Start.response.body.StatusQueryGetUri}}

@@ -1,5 +1,5 @@
 ###
-# @name=Example2_Start
+# @name example2_Start
 POST http://localhost:7289/api/example2
 Content-Type: application/json
 
@@ -7,25 +7,20 @@ Content-Type: application/json
   "name": "MegaCorp"
 }
 
-> {%
-    client.global.set("status_url", response.body.StatusQueryGetUri)
-    client.global.set("instance_id", response.body.Id)
-%}
+###
+# @name example2_Status
+GET {{example2_Start.response.body.StatusQueryGetUri}}
 
 ###
-# @name=Example2_Status
-GET {{status_url}}
-
-###
-# @name=Example2_Infrastructure_Provisioned
-POST http://localhost:7289/api/example2/{{instance_id}}/infrastructure
+# @name example2_Infrastructure_Provisioned
+POST http://localhost:7289/api/example2/{{example2_Start.response.body.Id}}/infrastructure
 
 {
   "name": "MegaCorp"
 }
 
 ###
-# @name=Example2_Application_Deployed
-POST http://localhost:7289/api/example2/{{instance_id}}/application
+# @name example2_Application_Deployed
+POST http://localhost:7289/api/example2/{{example2_Start.response.body.Id}}/application
 
 {}

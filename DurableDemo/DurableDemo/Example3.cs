@@ -68,7 +68,7 @@ public class Example3
     public static async Task RunOrchestrator(
         [OrchestrationTrigger] TaskOrchestrationContext context)
     {
-        var logger = context.CreateReplaySafeLogger(nameof(Example3));
+        var logger = context.CreateReplaySafeLogger<Example3>();
         logger.LogInformation("Starting trial cleanup workflow");
 
         var expiredTrials = await context.CallActivityAsync<CustomerInformation[]>(GetExpiredTrials);

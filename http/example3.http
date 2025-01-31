@@ -1,18 +1,16 @@
 ###
-# @name=Example3_Start
+# @name example3_Start
 POST http://localhost:7289/api/example3
 Content-Type: application/json
 
 {}
 
-> {% client.global.set("status_url", response.body.StatusQueryGetUri) %}
+###
+# @name example3_Status
+GET {{example3_Start.response.body.StatusQueryGetUri}}
 
 ###
-# @name=Example3_Status
-GET {{status_url}}
-
-###
-# @name=Example3_Stop
+# @name example3_Stop
 POST http://localhost:7289/api/example3/stop
 Content-Type: application/json
 

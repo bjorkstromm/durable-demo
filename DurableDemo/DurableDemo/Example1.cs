@@ -45,7 +45,7 @@ public class Example1
         [OrchestrationTrigger] TaskOrchestrationContext context,
         CustomerInformation customer)
     {
-        var logger = context.CreateReplaySafeLogger(nameof(Example1));
+        var logger = context.CreateReplaySafeLogger<Example1>();
         logger.LogInformation("Starting trial workflow for customer {CustomerName}", customer.Name);
 
         // Deploy infrastructure

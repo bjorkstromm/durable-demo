@@ -25,7 +25,7 @@ POST http://localhost:7289/api/example2/{{instance_id}}/infrastructure
 }
 
 ###
-# @name=Example2_Infrastructure_Provisioned
+# @name=Example2_Application_Deployed
 POST http://localhost:7289/api/example2/{{instance_id}}/application
 
 {}

@@ -32,6 +32,9 @@ public class Example3
         if (instance?.RuntimeStatus == OrchestrationRuntimeStatus.Running)
         {
             logger.LogInformation("Cleanup '{InstanceId}' is already running", InstanceId);
+
+            // DO NOT use this for public facing APIs. Instead use a custom status endpoint.
+            // Built-in status check response includes api key which can be used for accessing all orchestration instances.
             return await client.CreateCheckStatusResponseAsync(req, instance.InstanceId);
         }
 
@@ -40,6 +43,8 @@ public class Example3
 
         logger.LogInformation("Started cleanup '{InstanceId}'", instanceId);
 
+        // DO NOT use this for public facing APIs.
+        // Built-in status check response includes api key which can be used for accessing all orchestration instances.
         return await client.CreateCheckStatusResponseAsync(req, instanceId);
     }
 

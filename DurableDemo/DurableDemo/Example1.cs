@@ -35,6 +35,8 @@ public class Example1
 
         logger.LogInformation("Started orchestration '{InstanceId}' for customer {CustomerName}", instanceId, customer.Name);
 
+        // DO NOT use this for public facing APIs. Instead use a custom status endpoint.
+        // Built-in status check response includes api key which can be used for accessing all orchestration instances.
         return await client.CreateCheckStatusResponseAsync(req, instanceId);
     }
 
